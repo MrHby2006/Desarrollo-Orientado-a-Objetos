@@ -1,13 +1,14 @@
 
 package sistema_de_notas;
-import java.util.Date;
+
 public class Alumno {
     private String rut;
     private String nombre;
     private int edad;
-    private Date fecha;
-    
-    public Alumno(String rut, String nombre, int edad, Date fecha){
+    private String fecha;
+    private Asignatura asignatura;
+
+    public Alumno(String rut, String nombre, int edad, String fecha) {
         this.rut = rut;
         this.nombre = nombre;
         this.edad = edad;
@@ -26,8 +27,12 @@ public class Alumno {
         return edad;
     }
 
-    public Date getFecha() {
+    public String getFecha() {
         return fecha;
+    }
+
+    public Asignatura getAsignatura() {
+        return asignatura;
     }
 
     public void setRut(String rut) {
@@ -42,8 +47,11 @@ public class Alumno {
         this.edad = edad;
     }
 
-    public void setFecha(Date fecha) {
+    public void setFecha(String fecha) {
         this.fecha = fecha;
     }
-    
+
+    public void setAsignatura(Asignatura asignatura) {
+        this.asignatura = asignatura;
+    }
 }
