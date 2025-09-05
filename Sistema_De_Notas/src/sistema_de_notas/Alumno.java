@@ -3,9 +3,16 @@ package sistema_de_notas;
 import java.util.Date;
 public class Alumno {
     private String rut;
-    public String nombre;
-    public int edad;
-    public Date fecha;
+    private String nombre;
+    private int edad;
+    private Date fecha;
+    
+    public Alumno(String rut, String nombre, int edad, Date fecha){
+        this.rut = rut;
+        this.nombre = nombre;
+        this.edad = edad;
+        this.fecha = fecha;
+    }
 
     public String getRut() {
         return rut;

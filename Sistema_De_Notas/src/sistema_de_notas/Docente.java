@@ -8,6 +8,10 @@ public class Docente {
     public Date fechaIngreso;
     public String sede;
 
+    public void ponerNotas(){
+        
+    }
+    
     public String getRut() {
         return rut;
     }
