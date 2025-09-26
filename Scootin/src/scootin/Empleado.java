@@ -69,5 +69,13 @@ public class Empleado {
         this.puesto = puesto;
     }
     
-    
+    public void mostrarDatos(){
+        System.out.print("**************\n");
+        System.out.print("Nombre: "+ nombre+ "\n");
+        System.out.print("RUT: "+ rut+ "\n");
+        System.out.print("Genero: "+ genero+ "\n");
+        System.out.print("Antigüedad: "+ anioServicio+ "\n");
+        System.out.print("Edad: "+ edad+ "\n");
+        System.out.print("Puesto: "+ puesto.getNombre()+ "\n");
+    }
 }
