@@ -29,7 +29,8 @@ public class Pedido {
     
     public double calcularTotal(){
         for (Producto producto : productos){
-        total = total + producto.getPrecio();
+            total = total + producto.getPrecio();
+        }
         return total;
     }
 }

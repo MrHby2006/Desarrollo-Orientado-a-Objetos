@@ -34,13 +34,24 @@ public class Tienda {
             opcion = input.nextInt();
             
             if (opcion == 1){
-                for(Producto producto : productosDisponibles){
-                    productosDisponibles.mostrarDatos();
+                System.out.println("\n--- Catálogo de Productos ---");
+                for (Producto producto : productosDisponibles){
+                    producto.mostrarDatos();
+                    System.out.println("---");
                 }
             }else if (opcion == 2){
-            
+                for (Producto producto : productosDisponibles){
+                    producto.calcularTotal();
+                    producto.calcularEnvio();
+                    System.out.println("---");
+                }
             }else if (opcion == 3){
-            
+                    System.out.print("Escribe el nombre del Cliente: ");
+                    String nombre = input.next();
+                    System.out.print("Escribe el id del Cliente: ");
+                    String id = input.next();
+                    Cliente cliente = new Cliente(id, nombre);
+                    cliente.mostrarDatosCliente();
             }else{
                 System.out.print("Opcion no valida, intentelo nuevamente");
             }
