@@ -33,4 +33,18 @@ public class Ropa extends Producto{
     public void ajustarTalla(String tallaNueva){
         talla = tallaNueva;
     }
+    
+    @Override
+    public double calcularEnvio(){
+        return 1500;
+    }
+    
+    @Override
+    public void mostrarDatos(){
+        System.out.print("Nombre: "+nombre);
+        System.out.print("Id: "+idProducto);
+        System.out.print("Talla: "+talla);
+        System.out.print("Color: "+color);
+        System.out.print("Precio : $"+precio+"\n");
+    }
 }

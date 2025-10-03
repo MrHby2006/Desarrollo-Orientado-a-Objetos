@@ -1,10 +1,10 @@
 
 package tienda;
 
-public class Producto {
-    private String idProducto;
-    private String nombre;
-    private double precio;
+public abstract class Producto {
+    String idProducto;
+    String nombre;
+    double precio;
 
     public Producto() {
     }
@@ -42,4 +42,8 @@ public class Producto {
     public double calcularDescuento(double descuento){
         return precio = (precio * descuento / 100);
     }
+    
+    public abstract double calcularEnvio();
+    
+    public abstract void mostrarDatos();
 }

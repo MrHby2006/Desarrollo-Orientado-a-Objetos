@@ -27,7 +27,9 @@ public class Pedido {
     
     List <Producto> productos = new ArrayList<>();
     
-    public double calcularPrecio(){
-        
+    public double calcularTotal(){
+        for (Producto producto : productos){
+        total = total + producto.getPrecio();
+        return total;
     }
 }
