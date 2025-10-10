@@ -7,9 +7,11 @@ public class ProyectoEnvio {
         Scanner input = new Scanner(System.in);
         int opcion = 0;
         do{
+            System.out.print("Menu de Envios\n");
             System.out.print("1. Calcular envio nacional\n");
             System.out.print("2. Calcular envio internacional\n");
-            System.out.print("3. Salir\n");
+            System.out.print("3. Venta de Estampillas\n");
+            System.out.print("4. Salir\n");
             System.out.print("Ingrese una opcion: ");
             opcion = input.nextInt();
         
@@ -23,7 +25,7 @@ public class ProyectoEnvio {
                 double peso = input.nextDouble();
                 
                 Nacional envio = new Nacional(codigo, region, peso);
-                System.out.print("El valor del envio es de: $"+ envio.calcularValorEnvio());
+                envio.imprimirBoleta();
             }else if (opcion == 2){
                 System.out.print("Envio internacional\n");
                 System.out.print("Codigo: ");
@@ -36,13 +38,19 @@ public class ProyectoEnvio {
                 double tasa = input.nextDouble();
                 
                 Internacional envio = new Internacional(pais, tasa, codigo, peso);
-                System.out.print("El valor del envio es de: $"+ envio.calcularValorEnvio());
+                envio.imprimirBoleta();
             }else if (opcion == 3){
+                System.out.print("Venta de Estampillas");
+                System.out.print("Ingrese la cantidad: ");
+                double cantidad = input.nextDouble();
+                
+                VentaEstampillas venta = new VentaEstampillas(cantidad);
+                venta.imprimirBoleta();
+            }else if (opcion == 4){
                 System.out.print("Saliendo del sistema");
             }else{
                 System.out.print("Opcion no valida");
             }
-        
-        }while (opcion != 3);
+        }while (opcion != 4);
     }
 }

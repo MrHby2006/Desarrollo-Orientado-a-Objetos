@@ -2,9 +2,9 @@
 package proyectoenvio;
 
 public abstract class Envio {
-    private String codigo;
-    double peso;
-    double tarifaBase = 2000;
+    protected String codigo;
+    protected double peso;
+    protected final double tarifaBase = 2000;
 
     public Envio() {
     }
