@@ -1,7 +1,7 @@
 
 package gestiondeempleados;
 
-public abstract class Empleado {
+public abstract class Empleado implements BonusCalculable{
     protected String idEmpleado;
     protected String nombre;
     protected double sueldoBase;
@@ -14,6 +14,12 @@ public abstract class Empleado {
         this.nombre = nombre;
         this.sueldoBase = sueldoBase;
     }
+
+    public String getIdEmpleado() {
+        return idEmpleado;
+    }
     
     public abstract double calcularSalario();
+    
+    public abstract void mostrarDatos();
 }
